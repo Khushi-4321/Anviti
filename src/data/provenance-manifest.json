@@ -1,0 +1,8 @@
+{
+  "manifest": {
+    "challenges.json": "[SIMULATED] Realistic examples of GovTech challenges based on active government problem statements",
+    "startups.json": "[SIMULATED] Fictional startup profiles structured based on Startup India data models",
+    "pilots.json": "[SIMULATED] Fictional pilot execution tracking and milestone structure",
+    "policies": "[SOURCE: GFR 2017, DPIIT Orders]"
+  }
+}

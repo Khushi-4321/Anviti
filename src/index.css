@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --ink-navy: #0E2238;
+    --ink-navy-light: #1A3350;
+    --ink-navy-lighter: #264060;
+    --anviti-indigo: #5B4FCF;
+    --anviti-indigo-light: #7B71DB;
+    --anviti-indigo-lighter: #9B93E7;
+    --anviti-indigo-glow: rgba(91, 79, 207, 0.3);
+    --saffron-amber: #F2A93B;
+    --saffron-amber-light: #F5BD65;
+    --verified-green: #2DB87D;
+    --attention-amber: #E5A11C;
+    --risk-red: #DC4A43;
+    --validated-teal: #1B9AAA;
+    --surface-primary: #FAFAF8;
+    --surface-secondary: #F2F1EE;
+    --surface-tertiary: #E8E7E3;
+    --border-default: #D4D3CF;
+    --border-subtle: #E8E7E3;
+  }
+
+  .dark {
+    --surface-primary: #0A1628;
+    --surface-secondary: #0E2238;
+    --surface-tertiary: #1A3350;
+    --border-default: #2A4A6B;
+    --border-subtle: #1E3A55;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-surface-primary text-text-primary font-sans antialiased;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .dark body {
+    @apply bg-dark-surface-primary text-gray-100;
+  }
+
+  /* Focus styles for accessibility */
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-anviti-indigo;
+  }
+
+  /* Skip link for accessibility */
+  .skip-link {
+    @apply absolute -top-10 left-4 z-[100] bg-anviti-indigo text-white px-4 py-2 rounded-md;
+    transition: top 0.2s ease;
+  }
+
+  .skip-link:focus {
+    @apply top-4;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-surface-secondary;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-text-tertiary;
+  }
+}
+
+@layer components {
+  /* Thread Rail styles */
+  .thread-node {
+    @apply w-8 h-8 rounded-full flex items-center justify-center text-xs font-semibold transition-all duration-300;
+  }
+
+  .thread-node-completed {
+    @apply bg-anviti-indigo text-white;
+  }
+
+  .thread-node-active {
+    @apply bg-anviti-indigo text-white shadow-glow-indigo;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .thread-node-active {
+      @apply animate-glow;
+    }
+  }
+
+  .thread-node-future {
+    @apply bg-surface-tertiary text-text-tertiary border-2 border-border;
+  }
+
+  .thread-line-completed {
+    @apply h-0.5 bg-anviti-indigo flex-1;
+  }
+
+  .thread-line-future {
+    @apply h-0.5 bg-border flex-1 border-dashed;
+    background: repeating-linear-gradient(
+      90deg,
+      #D4D3CF 0,
+      #D4D3CF 8px,
+      transparent 8px,
+      transparent 14px
+    );
+  }
+
+  /* Provenance chip styles */
+  .provenance-chip {
+    @apply inline-flex items-center px-1.5 py-0.5 text-xs font-mono rounded;
+  }
+
+  .provenance-source {
+    @apply bg-verified/10 text-verified;
+  }
+
+  .provenance-derived {
+    @apply bg-anviti-indigo/10 text-anviti-indigo;
+  }
+
+  .provenance-simulated {
+    @apply bg-attention/10 text-attention;
+  }
+
+  /* Status pill styles */
+  .status-pill {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 text-xs font-medium rounded-full;
+  }
+
+  /* Card hover effect */
+  .card-interactive {
+    @apply transition-all duration-200 hover:shadow-md hover:-translate-y-0.5;
+  }
+
+  /* KPI Card */
+  .kpi-trend-up {
+    @apply text-verified;
+  }
+
+  .kpi-trend-down {
+    @apply text-risk;
+  }
+
+  /* Glass effect for modal overlays */
+  .glass-overlay {
+    @apply bg-ink-navy/60 backdrop-blur-sm;
+  }
+
+  /* State machine node */
+  .state-node {
+    @apply px-3 py-1.5 rounded-md text-xs font-medium transition-all duration-300;
+  }
+
+  .state-node-completed {
+    @apply bg-verified/10 text-verified border border-verified/30;
+  }
+
+  .state-node-active {
+    @apply bg-anviti-indigo/10 text-anviti-indigo border border-anviti-indigo/30 shadow-glow-indigo;
+  }
+
+  .state-node-pending {
+    @apply bg-surface-tertiary text-text-tertiary border border-border;
+  }
+
+  /* Funnel chart */
+  .funnel-bar {
+    @apply transition-all duration-500 ease-out;
+  }
+
+  /* Animated counter */
+  .counter-value {
+    @apply font-semibold tabular-nums;
+  }
+}
+
+@layer utilities {
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}

@@ -1,0 +1,36 @@
+[
+  {
+    "id": "start_001",
+    "name": "AgriNova Systems",
+    "dpiitDpp": "DIPP123456",
+    "udyamAadhaar": "UDYAM-MH-00-1234567",
+    "founderName": "Ramesh Kulkarni",
+    "email": "contact@agrinova.local",
+    "state": "Maharashtra",
+    "district": "Pune",
+    "domain": "Agritech",
+    "verified": true,
+    "metrics": {
+      "revenue": 1500000,
+      "employees": 12,
+      "yearsActive": 3
+    }
+  },
+  {
+    "id": "start_002",
+    "name": "BlockSecure Tech",
+    "dpiitDpp": "DIPP654321",
+    "udyamAadhaar": "UDYAM-KA-00-7654321",
+    "founderName": "Anjali Sharma",
+    "email": "founder@blocksecure.local",
+    "state": "Karnataka",
+    "district": "Bengaluru Urban",
+    "domain": "Fintech",
+    "verified": true,
+    "metrics": {
+      "revenue": 2500000,
+      "employees": 20,
+      "yearsActive": 5
+    }
+  }
+]

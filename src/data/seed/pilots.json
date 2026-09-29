@@ -1,0 +1,33 @@
+[
+  {
+    "id": "pilot_001",
+    "challengeId": "chal_001",
+    "proposalId": "prop_001",
+    "startupId": "start_001",
+    "status": "in_progress",
+    "totalAmount": 5000000,
+    "amountDisbursed": 1000000,
+    "startDate": "2026-01-15T00:00:00Z",
+    "endDate": "2026-12-15T00:00:00Z",
+    "milestones": [
+      {
+        "id": "ms_001",
+        "title": "Phase 1: Data Collection & Preprocessing",
+        "description": "Gather localized crop data across 5 districts in Maharashtra.",
+        "dueDate": "2026-04-15T00:00:00Z",
+        "amount": 1000000,
+        "status": "paid",
+        "evidenceUrl": "https://dummy.local/evidence/ms_001.pdf"
+      },
+      {
+        "id": "ms_002",
+        "title": "Phase 2: Model Training",
+        "description": "Train the baseline AI model and achieve >80% accuracy.",
+        "dueDate": "2026-08-15T00:00:00Z",
+        "amount": 2000000,
+        "status": "submitted",
+        "evidenceUrl": "https://dummy.local/evidence/ms_002.pdf"
+      }
+    ]
+  }
+]
